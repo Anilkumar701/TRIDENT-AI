@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#3f3f46"/>
+  <rect y="80" width="640" height="320" fill="#52525b"/>
+  <line x1="0" y1="240" x2="640" y2="240" stroke="#fafafa" stroke-width="8" stroke-dasharray="40 28"/>
+  <ellipse cx="330" cy="270" rx="120" ry="48" fill="#18181b"/>
+  <ellipse cx="330" cy="268" rx="78" ry="28" fill="#09090b"/>
+  <ellipse cx="300" cy="275" rx="22" ry="10" fill="#27272a"/>
+  <text x="24" y="36" fill="#fbbf24" font-family="monospace" font-size="18">MOCK FRAME · POTHOLE CLUSTER</text>
+</svg>

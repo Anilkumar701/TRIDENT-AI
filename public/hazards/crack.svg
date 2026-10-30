@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#44403c"/>
+  <rect y="70" width="640" height="340" fill="#57534e"/>
+  <path d="M80 90 L140 180 L120 250 L210 320 L190 400" fill="none" stroke="#1c1917" stroke-width="10"/>
+  <path d="M200 100 L260 200 L240 280 L330 360" fill="none" stroke="#0c0a09" stroke-width="6"/>
+  <text x="24" y="36" fill="#fbbf24" font-family="monospace" font-size="18">MOCK FRAME · ROAD CRACK</text>
+</svg>

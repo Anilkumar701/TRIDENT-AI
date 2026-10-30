@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+numpy
+pydantic
+
+# Optional vision stack — do not install on Python 3.15 / this Windows host.
+# There is no pyyaml wheel for 3.15 (source build needs MSVC), and App Control
+# may block torch.dll. Vision APIs use mock counts; YOLO is unused by default.
+# ultralytics
+# torch
+# pyyaml

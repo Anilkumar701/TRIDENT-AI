@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480">
+  <rect width="640" height="480" fill="#365314"/>
+  <rect y="280" width="640" height="200" fill="#3f3f46"/>
+  <ellipse cx="280" cy="250" rx="70" ry="40" fill="#a8a29e"/>
+  <ellipse cx="360" cy="270" rx="50" ry="30" fill="#d6d3d1"/>
+  <circle cx="420" cy="250" r="22" fill="#d6d3d1"/>
+  <rect x="400" y="268" width="12" height="50" fill="#78716c"/>
+  <rect x="250" y="278" width="12" height="50" fill="#78716c"/>
+  <rect x="310" y="282" width="12" height="48" fill="#78716c"/>
+  <text x="24" y="36" fill="#86efac" font-family="monospace" font-size="18">MOCK FRAME · CATTLE ON CARRIAGEWAY</text>
+</svg>
