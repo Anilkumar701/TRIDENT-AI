@@ -1,7 +1,7 @@
 import { Gauge, OctagonAlert, TimerReset } from 'lucide-react'
 import { useEffect, useRef } from 'react'
 import { Panel } from '../components/ui/Panel'
-import { useTrident } from '../context/useTrident'
+import { useTrident } from '../context/TridentProvider'
 import type { DriveState } from '../types'
 
 const STATE_STYLE: Record<DriveState, string> = {
@@ -126,10 +126,7 @@ function TelemetryCanvas() {
   const { telemetry } = useTrident()
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const telRef = useRef(telemetry)
-
-  useEffect(() => {
-    telRef.current = telemetry
-  }, [telemetry])
+  telRef.current = telemetry
 
   useEffect(() => {
     const canvas = canvasRef.current

@@ -12,7 +12,7 @@ import {
 import { ACCIDENT_DENSITY, REPEATED_HAZARDS, WEEKLY_CONGESTION } from '../data/mock'
 import { OpsMap } from '../components/map/OpsMap'
 import { Panel } from '../components/ui/Panel'
-import { useTrident } from '../context/useTrident'
+import { useTrident } from '../context/TridentProvider'
 import type { MapLayer } from '../types'
 
 const LAYERS: Array<{ id: MapLayer; label: string }> = [

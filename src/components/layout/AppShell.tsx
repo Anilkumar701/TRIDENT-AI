@@ -1,4 +1,4 @@
-import { useTrident } from '../../context/useTrident'
+import { useTrident } from '../../context/TridentProvider'
 import { AvTelemetry } from '../../views/AvTelemetry'
 import { GeoAnalyzer } from '../../views/GeoAnalyzer'
 import { HazardHub } from '../../views/HazardHub'

@@ -1,17 +1,13 @@
 import {
+  createContext,
   useCallback,
+  useContext,
   useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from 'react'
 import { HAZARD_IMAGES, INITIAL_REPORTS } from '../data/mock'
-import {
-  TridentContext,
-  type Metrics,
-  type Telemetry,
-  type TridentContextValue,
-} from './TridentContext'
 import type {
   DriveState,
   HazardCategory,
@@ -20,6 +16,48 @@ import type {
   MapLayer,
   ViewId,
 } from '../types'
+
+interface Metrics {
+  systemActive: boolean
+  videoNodes: number
+  trackedVehicles: number
+  hazardReports: number
+}
+
+interface Telemetry {
+  speedKmh: number
+  distanceM: number
+  closingVelMs: number
+  ttcSec: number
+  state: DriveState
+  obstacle: 'none' | 'pothole' | 'pedestrian'
+}
+
+interface TridentContextValue {
+  view: ViewId
+  setView: (v: ViewId) => void
+  sidebarOpen: boolean
+  setSidebarOpen: (v: boolean) => void
+  metrics: Metrics
+  reports: HazardReport[]
+  submitReport: (input: {
+    category: HazardCategory
+    severity: HazardSeverity
+    lat: number
+    lng: number
+    notes: string
+    imageSrc: string
+  }) => void
+  mapLayer: MapLayer
+  setMapLayer: (l: MapLayer) => void
+  telemetry: Telemetry
+  injectPothole: () => void
+  triggerPedestrian: () => void
+  accelerateEgo: () => void
+  resetTelemetry: () => void
+}
+
+const TridentContext = createContext<TridentContextValue | null>(null)
 
 const INITIAL_TELEMETRY: Telemetry = {
   speedKmh: 42,
@@ -203,4 +241,10 @@ export function TridentProvider({ children }: { children: ReactNode }) {
   return (
     <TridentContext.Provider value={value}>{children}</TridentContext.Provider>
   )
+}
+
+export function useTrident() {
+  const ctx = useContext(TridentContext)
+  if (!ctx) throw new Error('useTrident must be used within TridentProvider')
+  return ctx
 }

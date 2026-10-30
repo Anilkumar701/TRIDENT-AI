@@ -7,7 +7,7 @@ import {
   Route,
   Shield,
 } from 'lucide-react'
-import { useTrident } from '../../context/useTrident'
+import { useTrident } from '../../context/TridentProvider'
 import type { ViewId } from '../../types'
 
 const NAV: Array<{ id: ViewId; label: string; caption: string; icon: typeof LayoutDashboard }> = [

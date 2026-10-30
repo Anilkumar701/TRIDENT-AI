@@ -2,7 +2,7 @@ import { Camera, MapPin, ShieldAlert } from 'lucide-react'
 import { useMemo, useState, type FormEvent } from 'react'
 import { HAZARD_IMAGES } from '../data/mock'
 import { Panel } from '../components/ui/Panel'
-import { useTrident } from '../context/useTrident'
+import { useTrident } from '../context/TridentProvider'
 import type { HazardCategory, HazardSeverity } from '../types'
 
 const CATEGORIES: HazardCategory[] = [
