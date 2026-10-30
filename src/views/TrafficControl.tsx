@@ -3,7 +3,7 @@ import { LiveCctvNode } from '../components/cctv/LiveCctvNode'
 import { OpsMap } from '../components/map/OpsMap'
 import { MetricCard } from '../components/ui/MetricCard'
 import { Panel } from '../components/ui/Panel'
-import { useTrident } from '../context/TridentProvider'
+import { useTrident } from '../context/useTrident'
 
 export function TrafficControl() {
   const { metrics, reports, setMapLayer } = useTrident()

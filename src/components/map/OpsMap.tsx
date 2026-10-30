@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { MAP_NODES } from '../../data/mock'
-import { useTrident } from '../../context/TridentProvider'
+import { useTrident } from '../../context/useTrident'
 
 interface OpsMapProps {
   tall?: boolean

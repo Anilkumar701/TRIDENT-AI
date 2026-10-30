@@ -1,6 +1,6 @@
 import { Menu, Radio, Satellite } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { useTrident } from '../../context/TridentProvider'
+import { useTrident } from '../../context/useTrident'
 
 const TITLES: Record<string, string> = {
   control: 'Traffic Control Center',
